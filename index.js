@@ -413,16 +413,74 @@
 // console.log(min(1, 1)); // 1
 
 // Напиши функцию getRectArea(dimensions) для вычисления площади прямоугольника со сторонами, значения которых будут переданы в параметр dimensions в виде строки.
-//  Значения гарантированно разделены пробелом.
+// //  Значения гарантированно разделены пробелом.
 
-function getRectArea(dimensions) {
-    const newMassive = dimensions.split(' ');
-    for (const element of newMassive) {
-        const a = newMassive[0]
-        const b = newMassive.pop();
-        return a * b;
-    }
-}
+// function getRectArea(dimensions) {
+//     const newMassive = dimensions.split(' ');
+//     for (const element of newMassive) {
+//         const a = newMassive[0]
+//         const b = newMassive.pop();
+//         return a * b;
+//     }
+// }
 
-console.log(getRectArea('8 11'));
+// console.log(getRectArea('8 11'));
 
+// Напиши функцию logItems(items), которая получает массив и использует цикл for, который для каждого элемента массива будет выводить в консоль сообщение в формате
+//     < номер элемента > - <значение элемента>. Нумерация элементов должна начинаться с 1.
+
+// Например для первого элемента массива ['Mango', 'Poly', 'Ajax'] с индексом 0 будет выведено 1 - Mango, а для индекса 2 выведет 3 - Ajax.
+
+// function logItems(items) {
+//     // for (let i = 0; i < items.length; i++) {
+//     //     const num = i + 1;
+//     //     console.log(items[i], num);
+//     // }
+//     // --------------------- second try
+//     // for (const item of items) {
+
+//     //     console.log(items.indexOf(item) + 1,  item);
+//     // }
+// }
+
+// logItems(['Mango', 'Poly', 'Ajax']);
+// logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+
+// Напиши функцию printContactsInfo(names, phones) которая выводит в консоль имя и телефонный номер пользователя.
+// В параметры names и phones будут переданы строки имен и телефонных номеров, разделенные запятыми.
+// Порядковый номер имен и телефонов в строках указывают на соответствие.Количество имен и телефонов гарантированно одинаковое.
+
+// function printContactsInfo(names, phones) {
+//     const namesArr = names.split(',');
+//     const phonesArr = phones.split(',');
+//     for (let i = 0; i < namesArr.length; i++) {
+//         console.log(`${namesArr[i]} - ${phonesArr[i]}`);
+//     }
+// }
+// printContactsInfo(
+//   'Jacob,William,Solomon,Artemis',
+//   '89001234567,89001112233,890055566377,890055566300',
+// );
+
+// Напиши функцию findLargestNumber(numbers)которая ищет самое большое число в массиве.
+
+// function findLargestNumber(numbers) {
+//     let number = Math.max(...numbers);
+//     console.log(number);
+// }
+
+// console.log(findLargestNumber([2, 17, 94, 1, 23, 37])); // 94
+// console.log(findLargestNumber([49, 4, 7, 83, 12])); // 83
+
+// Напишите функцию calAverage() которая принимает произвольное кол-во аргументов и возвращает их среднее значение. Все аругменты будут только числами.
+
+// function calAverage() {
+//     let sum = 1;
+//     for (const argument of arguments) {
+//         sum += argument;
+//     }
+//     return sum / arguments.length;
+// }
+// console.log(calAverage(1, 2, 3, 4)); // 2.5
+// console.log(calAverage(14, 8, 2)); // 8
+// console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
