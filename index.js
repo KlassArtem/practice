@@ -484,3 +484,89 @@
 // console.log(calAverage(1, 2, 3, 4)); // 2.5
 // console.log(calAverage(14, 8, 2)); // 8
 // console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
+
+// function highAndLow(numbers){
+//   const newArr = numbers.split(" ").map(Number);
+//   let highNum = Math.max(...newArr);
+//   let minNum = Math.min(...newArr);
+//   console.log(`${highNum}  ${minNum}`)
+// }
+
+// highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
+// highAndLow("1 2 3");
+
+
+// //! Напиши функцию formatTime(minutes) которая переведёт значение minutes (количество минут) в строку в формате часов и минут HH:MM.
+
+// function formatTime(minutes) {
+//     const hours = Math.floor(minutes / 60);
+//         const minutesLeft = minutes % 60;
+//         return `${hours < 10? `0${hours}` : hours}:${minutesLeft < 10? `0${minutesLeft}` : minutesLeft}`;
+// }
+
+// console.log(formatTime(70)); // "01:10"
+// console.log(formatTime(450)); // "07:30"
+// console.log(formatTime(1441)); // "24:01"
+
+// !Коллекция курсов (includes, indexOf, push и т. д.)
+// Напишите функции для работы с коллекцией обучающих курсов courses:
+
+// addCourse(name) - добавляет курс в конец коллекции
+// removeCourse(name) - удаляет курс из коллекции
+// updateCourse(oldName, newName) - изменяет имя на новое
+
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
+
+// function addCourse(name) {
+//     const addArr = courses.indexOf(name);
+//     if (addArr === -1) {
+//         courses.push(name);
+//     }
+// }
+// function removeCourse(name) {
+//     const remArr = courses.indexOf(name);
+//     if (remArr!== -1) {
+//         courses.splice(remArr, 1);
+//     }
+// }
+// function updateCourse(oldName, newName) {
+//     const updArr = courses.indexOf(oldName);
+//     if (updArr !== -1) {
+//         courses.splice(updArr, 1, newName);
+//     }
+// }
+
+// addCourse('Express');
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
+// addCourse('CSS'); // 'У вас уже есть такой курс'
+
+// removeCourse('React');
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
+// removeCourse('Vue'); // 'Курс с таким имененем не найден'
+
+// updateCourse('Express', 'NestJS');
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+
+// Напиши скрипт, который, для объекта user, последовательно:
+
+// добавляет поле mood со значением 'happy'
+// заменяет значение hobby на 'skydiving'
+// заменяет значение premium на false
+// выводит содержимое объекта user в формате ключ:значение используя Object.keys() и for...of
+
+// const user = {
+//   name: 'Mango',
+//   age: 20,
+//   hobby: 'html',
+//   premium: true,
+// };
+
+// user.mood = 'happy';
+// user.hobby = 'skydiving';
+// user.premium = false;
+
+// const keys = Object.keys(user);
+// for (const key of keys) {
+//     console.log(`${key}: ${user[key]}`);
+// }
+
