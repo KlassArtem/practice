@@ -619,63 +619,98 @@
 // ! Напиши скрипт управления личным кабинетом интернет банка. Есть объект account в котором необходимо реализовать методы для работы с балансом и историей транзакций.
 
 
-//  * Типов транзацкий всего два.
-//  * Можно положить либо снять деньги со счета.
+// //  * Типов транзацкий всего два.
+// //  * Можно положить либо снять деньги со счета.
 
-const Transaction = {
-    DEPOSIT: 'deposit',
-    WITHDRAW: 'withdraw',
-  };
+// const Transaction = {
+//     DEPOSIT: 'deposit',
+//     WITHDRAW: 'withdraw',
+//   };
   
   
-//    * Каждая транзакция это объект со свойствами: id, type и amount
+// //    * Каждая транзакция это объект со свойствами: id, type и amount
    
   
-  const account = {
-    //* Текущий баланс счета
-    balance: 0,
+//   const account = {
+//     //* Текущий баланс счета
+//     balance: 0,
   
-    // *История транзакций
-    transactions: [],
+//     // *История транзакций
+//     transactions: [],
   
     
-    //  * Метод создает и возвращает объект транзакции.
-    //  * Принимает сумму и тип транзакции.
+//     //  * Метод создает и возвращает объект транзакции.
+//     //  * Принимает сумму и тип транзакции.
      
-    createTransaction(amount, type) {},
+//     createTransaction(amount, type) {
+//       const transaction = {
+//         id: this.transactions.length + 1,
+//         amount: amount,
+//         type: type,
+//       };
+//       return transaction;
+//     },
   
     
-    //  * Метод отвечающий за добавление суммы к балансу.
-    //  * Принимает сумму танзакции.
-    //  * Вызывает createTransaction для создания объекта транзакции
-    //  * после чего добавляет его в историю транзакций
+//     //  * Метод отвечающий за добавление суммы к балансу.
+//     //  * Принимает сумму танзакции.
+//     //  * Вызывает createTransaction для создания объекта транзакции
+//     //  * после чего добавляет его в историю транзакций
      
-    deposit(amount) {},
+//     deposit(amount) {
+//       const transaction = this.createTransaction(amount, Transaction.DEPOSIT);
+//       this.transactions.push (transaction);
+//       this.balance += amount;
+//       return this;
+//     },
   
     
-    //  * Метод отвечающий за снятие суммы с баланса.
-    //  * Принимает сумму танзакции.
-    //  * Вызывает createTransaction для создания объекта транзакции
-    //  * после чего добавляет его в историю транзакций.
-    //  *
-    //  * Если amount больше чем текущий баланс, выводи сообщение
-    //  * о том, что снятие такой суммы не возможно, недостаточно средств.
+//     //  * Метод отвечающий за снятие суммы с баланса.
+//     //  * Принимает сумму танзакции.
+//     //  * Вызывает createTransaction для создания объекта транзакции
+//     //  * после чего добавляет его в историю транзакций.
+//     //  *
+//     //  * Если amount больше чем текущий баланс, выводи сообщение
+//     //  * о том, что снятие такой суммы не возможно, недостаточно средств.
      
-    withdraw(amount) {},
+//     withdraw(amount) {
+//       if (amount > this.balance) {
+//         throw new Error('Недостаточно средств');
+//       }
+//       const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
+//       this.transactions.push(transaction);
+//       this.balance -= amount;
+//       return this;
+//     },
   
    
-    //  * Метод возвращает текущий баланс
+//     //  * Метод возвращает текущий баланс
     
-    getBalance() {},
+//     getBalance() {
+//       return this.balance;
+//     },
   
    
-    //  * Метод ищет и возвращает объект транзации по id
+//     //  * Метод ищет и возвращает объект транзации по id
     
-    getTransactionDetails(id) {},
+//     getTransactionDetails(id) {
+//       return this.transactions.find(transaction => transaction.id === id);
+//     },
   
    
-    //  * Метод возвращает количество средств
-    //  * определенного типа транзакции из всей истории транзакций
+//     //  * Метод возвращает количество средств
+//     //  * определенного типа транзакции из всей истории транзакций
     
-    getTransactionTotal(type) {},
-  };
+//     getTransactionTotal(type) {
+//       let total = 0;
+//       for (const transaction of this.transactions) {
+//         if (transaction.type === type) {
+//           total += transaction.amount;
+//         }
+//       }
+//       return total;
+
+//     },
+//   };
+
+
