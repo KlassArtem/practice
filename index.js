@@ -721,8 +721,75 @@
 //     const ave = nums.reduce((a, b) => (a + b)) / numbers.length;
 //     return ave;
 
-// } 
+// }
 // const average = calculateAverage(numbers);
 
 
 // console.log(average); // Выводит: 3
+
+//!  стрелочные функции
+
+// const number = 5;
+// const square = calculateSquare(number);
+// function calculateSquare(number) {
+//     return Math.pow(number, 2)
+// }
+// console.log(square); // Выводит: 25
+
+
+// const calculateCube = (number) => {
+//     return Math.pow(number, 3);
+// }
+// const cube = calculateCube(number);
+// console.log(cube); // Выводит: 125
+
+// const width = 10;
+// const height = 5;
+// const calculateArea = (width, height) => {
+//     return width * height;
+//  }
+// const area = calculateArea(width, height);
+// console.log(area); // Выводит: 50
+
+// const percent = 20;
+// const calculatePercentage = (number, percent) => {
+//     return number * percent / 100;
+// }
+// const percentage = calculatePercentage(number, percent);
+// console.log(percentage); // Выводит: 1
+
+
+// const numbers = [1, 2, 3, 4, 5, 6];  
+// // !
+// const filterEvenNumbers = (numbers) => {
+//     const newNums = [...numbers];
+//     // //console.log(newNums); 
+//     return newNums.filter(num => num % 2 === 0);
+// }
+// const evenNumbers = filterEvenNumbers(numbers);
+// console.log(evenNumbers); // Выводит: [2, 4, 6]
+// // !
+// const doubleNumbers = (numbers) => { 
+//     const newNums = [...numbers]; 
+//    // // console.log(newNums);
+//     return newNums.map(num => num * 2);
+// }
+// const doubledNumbers = doubleNumbers(numbers);
+// console.log(doubledNumbers); // Выводит: [2, 4, 6, 8, 10, 12]
+// // !
+// const calculateSum = (numbers) => {
+//     const newNums = numbers.reduce((prevVal, num) => {
+//         return prevVal + num;
+//     }, 0); 
+//     return newNums;
+//  }
+// const sum = calculateSum(numbers);
+// console.log(sum); // Выводит: 21
+// // !
+
+// const getPositiveNumbers = (numbers) => {
+//     const newNums = numbers.filter(num => num > 0);
+//     return newNums;
+// }
+// const positiveNumbers = getPositiveNumbers(numbers);
+// console.log(positiveNumbers); // Выводит: [1, 2, 3, 4, 5, 6]
