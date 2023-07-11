@@ -714,3 +714,15 @@
 //   };
 
 
+// const numbers = [1, 2, 3, 4, 5];
+
+// function calculateAverage(numbers) {
+//     const nums = [...numbers];
+//     const ave = nums.reduce((a, b) => (a + b)) / numbers.length;
+//     return ave;
+
+// } 
+// const average = calculateAverage(numbers);
+
+
+// console.log(average); // Выводит: 3
