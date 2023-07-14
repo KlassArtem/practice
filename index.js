@@ -756,7 +756,7 @@
 //     return number * percent / 100;
 // }
 // const percentage = calculatePercentage(number, percent);
-// console.log(percentage); // Выводит: 1
+// console.log(percentage); //? Выводит: 1
 
 
 // const numbers = [1, 2, 3, 4, 5, 6];  
@@ -790,6 +790,7 @@
 // const getPositiveNumbers = (numbers) => {
 //     const newNums = numbers.filter(num => num > 0);
 //     return newNums;
+    
 // }
 // const positiveNumbers = getPositiveNumbers(numbers);
-// console.log(positiveNumbers); // Выводит: [1, 2, 3, 4, 5, 6]
+// console.log(positiveNumbers); //? 
